@@ -1,0 +1,10 @@
+body {
+    background-image: "img/gold.jpg";
+}
+
+#crust {
+    background-color: black;
+    color: goldenrod;
+    width: 600px;
+    height: 400px;
+}
