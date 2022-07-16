@@ -7,30 +7,20 @@ h1 {
     text-align: center;
 }
 
-#crust {
+#pizza {
     vertical-align: middle;
     color: rgba(241, 225, 129, 0.848);
     border-radius: 25px;
     background: black;
     padding: 30px;
     width: 400px;
-    height: 250px;
+    height: 500px;
     float: left;
 }
 
-#toppings {
-    vertical-align: middle;
-    color: rgba(241, 225, 129, 0.848);
-    border-radius: 25px;
-    background: black;
-    padding: 30px;
-    width: 400px;
-    height: 250px;
-    float: right;
-}
 
 .results {
-    text-align: center;
+    text-align: right;
     color: rgba(241, 225, 129, 0.848);
     border-radius: 25px;
     background: black;
