@@ -5,42 +5,44 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/scripts.js"></script>
 <body>
-    <h1>Golden Pizza</h1>
-    <form id="pizza">
-        <h2>Choose your pizza size! $100 per inch</h2>
-        <input type="radio" id="small" name="pizza-size" value="small">
-        <label for="html">Small 10"</label>
-        <br>
-        <br>
-        <input type="radio" id="medium" name="pizza-size" value="meidum">  
-        <label for="css">Medium 12"</label>
-        <br>
-        <br>
-        <input type="radio" id="large" name="pizza-size" value="large">
-        <label for="javascript">Large 14"</label>
-    
-        <h2> Choose your toppings! $50 each</h2>
-        <h4> (if none are selected, pizza will be cheese only!) </h4>
-        <input type="checkbox" id="topping1" name="topping1" value="pepperoni">
-        <label for="topping11"> Pepperoni</label><br>
-        <input type="checkbox" id="topping2" name="topping2" value="mushrooms">
-        <label for="topping2"> Mushrooms</label><br>
-        <input type="checkbox" id="topping3" name="topping3" value="spinach">
-        <label for="topping3"> Spinach</label><br>
-        <input type="checkbox" id="topping4" name="topping4" value="green-pepper">
-        <label for="topping4"> Green Pepper</label><br>
-        <input type="checkbox" id="topping5" name="topping5" value="onion">
-        <label for="topping5"> Onion</label><br>
-        <input type="checkbox" id="topping6" name="topping6" value="olives">
-        <label for="topping6"> Olives</label><br>
-        <br>
-        <br>
+    <div class="container">
+        <h1>Golden Pizza</h1>
+        <form id="pizza">
+            <h2>Choose your pizza size! $100 per inch</h2>
+            <input type="radio" id="small" name="pizza-size" value="small">
+            <label for="html">Small 10"</label>
+            <br>
+            <br>
+            <input type="radio" id="medium" name="pizza-size" value="meidum">  
+            <label for="css">Medium 12"</label>
+            <br>
+            <br>
+            <input type="radio" id="large" name="pizza-size" value="large">
+            <label for="javascript">Large 14"</label>
+        
+            <h2> Choose your toppings! $50 each</h2>
+            <h4> (if none are selected, pizza will be cheese only!) </h4>
+            <input type="checkbox" id="topping1" name="topping1" value="pepperoni">
+            <label for="topping11"> Pepperoni</label><br>
+            <input type="checkbox" id="topping2" name="topping2" value="mushrooms">
+            <label for="topping2"> Mushrooms</label><br>
+            <input type="checkbox" id="topping3" name="topping3" value="spinach">
+            <label for="topping3"> Spinach</label><br>
+            <input type="checkbox" id="topping4" name="topping4" value="green-pepper">
+            <label for="topping4"> Green Pepper</label><br>
+            <input type="checkbox" id="topping5" name="topping5" value="onion">
+            <label for="topping5"> Onion</label><br>
+            <input type="checkbox" id="topping6" name="topping6" value="jalapenos">
+            <label for="topping6"> Jalapenos</label><br>
+            <br>
+            <br>
 
-        <button type="submit" class="btn"> Order Now! </button>
-    </form>    
-    <div class="results">
-        <h2> Total Price </h2>
-        <p id="price"> </p>
-    </div>    
+            <button type="submit" class="btn"> Calculate Price! </button>
+        </form>    
+        <div class="results">
+            <h2> Total Price: </h2>
+            <p id="price"> </p>
+        </div> 
+    </div>   
 </body>
 </html>
