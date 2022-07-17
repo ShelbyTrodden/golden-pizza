@@ -1,3 +1,35 @@
+# Golden Pizza
+
+#### By _**Shelby Trodden**_
+
+#### _Pizza Order Form_
+
+
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+
+
+## Description
+_This is a webpage for a pizza restaurant. User makes their selections to get the cost of their pizza. _
+
+## Setup/Installation Requirements
+* Clone this repository to your desktop
+* Navigate to the top level of the directory
+* Open golden-pizza/index.html in your browser
+
+## Known Bugs
+* No known issues
+
+## License
+
+If you run into any bugs, please contact me at shelby.trodden@gmail.com
+
+[MIT License](/LICENSE.txt)
+
+Copyright (c) [2022] [Shelby Trodden]
 # Tests 
 
 Describe: Pizza ()
