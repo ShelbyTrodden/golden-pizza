@@ -6,16 +6,16 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.pieCost = function() {
-    let sizePrice=0
-    let toppingPrice= this.toppings.length
+    let sizePrice=0;
+    let toppingPrice= this.toppings.length;
     if (this.size === "small") {
-        this.price += 1000;
+        this.sizePrice += 1000;
     } else if (this.size === "medium") {
-        this.price += 1200;
+        this.sizePrice += 1200;
     } else if (this.size === "large") {
-        this.price += 1400;
+        this.sizePrice += 1400;
     }    
-    let totalPrice= sizePrice + toppingPrice;
+    let totalPrice= (sizePrice + toppingPrice*50);
     return totalPrice;
 }
 
@@ -30,11 +30,11 @@ window.addEventListener("load", function(){
     form.addEventListener("submit", function(event){
         event.preventDefault();
 
-        let inputSize = document.querySelector("input[name='pizza-size']:checked"); 
+        let inputSize = document.getElementById("pizza-size").value; 
         toppingArray = [];
-        const onTop = document.querySelectorAll("input[name='topping']:checked");
+        const onTop = document.querySelectorAll("input[name='toppings']:checked");
         onTop.forEach(toppings => {
-            toppingArray.push(toppings.value;
+            toppingArray.push(toppings.value);
         });  
         let pizzaOrder = new Pizza(inputSize, toppingArray);
         let totalPrice= pizzaOrder.pieCost()
