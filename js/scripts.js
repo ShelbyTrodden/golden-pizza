@@ -8,7 +8,8 @@ function Pizza(size, toppings) {
 
 let pizzaOrder = new Pizza()
 
-Pizza.prototype.sizeCost = function() {
+Pizza.prototype.pieCost = function() {
+    let toppingPrice= this.toppings.length;
     if (pizzaOrder.size === "small") {
         this.price += 1000.00;
     } else if (pizzaOrder.size === "medium") {
@@ -16,7 +17,7 @@ Pizza.prototype.sizeCost = function() {
     } else if (pizzaOrder.size === "large") {
         this.price += 1400.00;
     }    
-    return pizzaOrder.price;
+    this.price += toppingPrice * 50
 }
 
 
@@ -30,6 +31,11 @@ window.addEventListener("load", function(){
     form.addEventListener("submit", function(event){
         event.preventDefault();
 
+        let size = document.querySelector('input:radio[name="pizza-size"]:checked')
+        let toppings = []
+        document.querySelector('input[name="toppings"]:checked').each(function(){
+            toppings.push(this.value);
+        })    
         const result = pizzaOrder.price;
         (document.getElementById("price").innerText = result);
 

@@ -30,6 +30,7 @@ If you run into any bugs, please contact me at shelby.trodden@gmail.com
 [MIT License](/LICENSE.txt)
 
 Copyright (c) [2022] [Shelby Trodden]
+
 # Tests 
 
 Describe: Pizza ()
@@ -43,8 +44,12 @@ Code userPizza = new Pizza("large",["jalapenos", "pepperoni", "mushrooms"])
 Expected output: Pizza {size: "large", toppings: ["jalapenos", "pepperoni", "mushrooms"] price:0}
 
 
-Describe sizeCost()
+Describe pieCost()
 
 Test: It should return the cost of the pizza based off of the crust size
 Code: const pizzaOrder = new Pizza("medium", "jalapeno")
 Expected Output: Pizza {size: "medium", toppings: "jalapenos", price: 1200}
+
+Test: It should return the cost of the pizza based off of size and toppings
+Code: const pizzaOrder = new Pizza("medium", ["jalapeno", "pepperoni", "mushrooms"])
+Expected Output: Pizza {size: "medium", toppings: ["jalapeno", "pepperoni", "mushrooms"], price: 1350}
