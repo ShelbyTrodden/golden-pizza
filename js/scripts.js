@@ -6,18 +6,18 @@ function Pizza(size, toppings) {
     this.price = 0;
 }
 
-let pizzaOrder = new Pizza()
+let pizzaOrder = new Pizza();
 
 Pizza.prototype.pieCost = function() {
-    let toppingPrice= this.toppings.length;
-    if (pizzaOrder.size === "small") {
-        this.price += 1000.00;
-    } else if (pizzaOrder.size === "medium") {
-        this.price += 1200.00;
-    } else if (pizzaOrder.size === "large") {
-        this.price += 1400.00;
+    if (this.size === "small") {
+        this.price += 1000;
+    } else if (this.size === "medium") {
+        this.price += 1200;
+    } else if (this.size === "large") {
+        this.price += 1400;
     }    
-    this.price += toppingPrice * 50
+    this.price += this.toppings * 50;
+    return this.price;
 }
 
 
@@ -31,14 +31,22 @@ window.addEventListener("load", function(){
     form.addEventListener("submit", function(event){
         event.preventDefault();
 
-        let size = document.querySelector('input:radio[name="pizza-size"]:checked')
-        let toppings = []
-        document.querySelector('input[name="toppings"]:checked').each(function(){
-            toppings.push(this.value);
-        })    
-        const result = pizzaOrder.price;
+        let size = document.querySelector("input[name='pizza-size']:checked"); 
+        toppingArray = [];
+        const onTop = document.querySelectorAll("input[name='topping']:checked");
+        onTop.forEach(toppings => {
+            toppingArray.push(toppings.value);
+        });  
+        let price= pizzaOrder.pieCost()
+        const result = price;
+        submitButton.setAttribute('disabled', 'disabled');
         (document.getElementById("price").innerText = result);
 
     })
+    resetBtn.addEventListener('click', function () {
+        document.getElementById('pizza').reset();
+        submitButton.removeAttribute('disabled');
+        document.getElementById('beep-boop').innerText = '';
+    });
 
 })
