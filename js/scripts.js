@@ -46,7 +46,7 @@ window.addEventListener("load", function(){
     resetBtn.addEventListener('click', function () {
         document.getElementById('pizza').reset();
         submitButton.removeAttribute('disabled');
-        document.getElementById('beep-boop').innerText = '';
+        document.getElementById('price').innerText = '';
     });
 
 })
