@@ -9,11 +9,11 @@ Pizza.prototype.pieCost = function() {
     let sizePrice=0;
     let toppingPrice= this.toppings.length;
     if (this.size === "small") {
-        this.sizePrice += 1000;
+        sizePrice +=1000;
     } else if (this.size === "medium") {
-        this.sizePrice += 1200;
+        sizePrice +=1200;
     } else if (this.size === "large") {
-        this.sizePrice += 1400;
+        sizePrice +=1400;
     }    
     let totalPrice= (sizePrice + toppingPrice*50);
     return totalPrice;
