@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
     form.addEventListener("submit", function(event){
         event.preventDefault();
 
-        let inputSize = document.getElementById("pizza-size").value; 
+        let inputSize = document.querySelector('input[name="pizza-size"]:checked').value; 
         toppingArray = [];
         const onTop = document.querySelectorAll("input[name='toppings']:checked");
         onTop.forEach(toppings => {
