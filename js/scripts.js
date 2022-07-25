@@ -3,6 +3,7 @@
 function Pizza(size, toppings) {
     this.size = size;
     this.toppings = toppings;
+    this.price = 0;
 }
 
 Pizza.prototype.pieCost = function() {
@@ -15,8 +16,7 @@ Pizza.prototype.pieCost = function() {
     } else if (this.size === "large") {
         sizePrice +=1400;
     }    
-    let totalPrice= (sizePrice + toppingPrice*50);
-    return totalPrice;
+    this.price = (sizePrice + toppingPrice*50);
 }
 
 
@@ -37,10 +37,9 @@ window.addEventListener("load", function(){
             toppingArray.push(toppings.value);
         });  
         let pizzaOrder = new Pizza(inputSize, toppingArray);
-        let totalPrice= pizzaOrder.pieCost()
-        const result = totalPrice;
+        pizzaOrder.pieCost()
         submitButton.setAttribute('disabled', 'disabled');
-        (document.getElementById("price").innerText = ("$" + result + ".00"));
+        (document.getElementById("price").innerText = ("$" + pizzaOrder.price + ".00"));
 
     })
     resetBtn.addEventListener('click', function () {
